@@ -11,6 +11,7 @@ Experimentos incluidos:
 1. Canicas con coeficientes booleanos
 2. Clásico probabilístico con múltiples rendijas
 3. Cuántico con múltiples rendijas
+4. Graficador de diagramas de barras
 
 ## Requisitos 🧾
 ---
@@ -64,13 +65,17 @@ A continuación se muestra un ejemplo de ejecución de cada experimento en [IDLE
 
 #### 1. Canicas con coeficientes booleanos
 ```
->>> Sim_Exp_Can_Det([[1,0,0,1],[0,0,1,0],[0,0,0,0],[0,1,0,0]],[0,1,3,2],3)
+>>> Sim_Exp_Can_Det_Prob_Cuan([[1,0,0,1],[0,0,1,0],[0,0,0,0],[0,1,0,0]],[0,1,3,2],3)
      array([6, 0, 0, 0])
+>>> Sim_Exp_Can_Det_Prob_Cuan([[0,1/6,5/6], [1/3,1/2,1/6], [2/3,1/3,0]], [2,0,1],2)
+     array([1.25, 0.91666667, 0.83333333])
+>>> Sim_Exp_Can_Det_Prob_Cuan([[1/sqrt(2),1/sqrt(2),0], [1j/sqrt(2),-1j/sqrt(2),0], [0,0,1j]],[1,2,3],4)
+     array([1.5+1.5j, 0.5-0.5j 3. +0.j])
 ```
 
 #### 2. Clásico probabilísitico con múltiples rendijas
 ```
->>> Sim_Exp_Part_Prob(2,[[0,0,0,0,0,0,0,0],[1/2,0,0,0,0,0,0,0],[1/2,0,0,0,0,0,0,0],[0,1/3,0,1,0,0,0,0],\
+>>> Sim_Exp_Ren_Part_Prob(2,[[0,0,0,0,0,0,0,0],[1/2,0,0,0,0,0,0,0],[1/2,0,0,0,0,0,0,0],[0,1/3,0,1,0,0,0,0],\
                     [0,1/3,0,0,1,0,0,0],[0,1/3,1/3,0,0,1,0,0],[0,0,1/3,0,0,0,1,0],[0,0,1/3,0,0,0,0,1]])
      (array([[0., 0., 0., 0., 0., 0., 0., 0.],
           [0., 0., 0., 0., 0., 0., 0., 0.],
@@ -92,7 +97,7 @@ A continuación se muestra un ejemplo de ejecución de cada experimento en [IDLE
 
 #### 3. Cuántico con múltiples rendijas
 ```
->>> Sim_Exp_Part_Cuan(2,[[0,0,0,0,0,0,0,0],[1/sqrt(2),0,0,0,0,0,0,0],[1/sqrt(2),0,0,0,0,0,0,0],\
+>>> Sim_Exp_Ren_Part_Cuan(2,[[0,0,0,0,0,0,0,0],[1/sqrt(2),0,0,0,0,0,0,0],[1/sqrt(2),0,0,0,0,0,0,0],\
                     [0,(-1+1j)/sqrt(6),0,1,0,0,0,0],[0,(-1-1j)/sqrt(6),0,0,1,0,0,0],[0,(1-1j)/sqrt(6),(-1+1j)/sqrt(6),0,0,1,0,0],\
                     [0,0,(-1-1j)/sqrt(6),0,0,0,1,0],[0,0,(1-1j)/sqrt(6),0,0,0,0,1]])
      (array([[0+0j, 0+0j, 0+0j, 0+0j, 0+0j, 0+0j, 0+0j, 0+0j],
@@ -111,6 +116,13 @@ A continuación se muestra un ejemplo de ejecución de cada experimento en [IDLE
           [2.45142679e-17-2.45142679e-17j],
           [-2.88675135e-01-2.88675135e-01j],
           [2.88675135e-01-2.88675135e-01j]]))
+```
+
+#### 4. Graficador de diagramas de barras
+```
+>>> Graf_Exp([0,1,2,3,4,5,6,7],[0,0,0,1/6,1/6,1/3,1/6,1/6])
+     ¿Desea guardar una imagen del gráfico? (s/n): s
+     <img src="https://github.com/JAPV-X2612/Pruebas/blob/main/gr%C3%A1fico_experimento.png" width="360" height="270" />    
 ```
 
 ## Textos y Wikis 📖

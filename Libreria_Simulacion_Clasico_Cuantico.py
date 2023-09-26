@@ -9,6 +9,7 @@
 from numpy import *
 from copy import *
 from math import *
+import matplotlib.pyplot as plt
 
 
 def Mult_Clics(m,c):
@@ -21,20 +22,15 @@ def Mult_Clics(m,c):
     return mc
 
 
-def Sim_Exp_Can_Det(m,xi,c):
-    """Calcula y devuelve el estado final de una simulación del experimento determinístico de canicas dada la matriz de relaciones, el estado inicial y el número de clics
+def Sim_Exp_Can_Det_Prob_Cuan(m,xi,c):
+    """Calcula y devuelve el estado final de una simulación del experimento determinístico, probabilístico o cuántico de canicas dada la matriz de relaciones, el estado inicial y el número de clics
     (2D array, 1D array, int) -> 1D array"""
     m,xi = array(m),array(xi)
     xf = copy(xi)
     for x in xi:
         if x != int(x):
             return "El número de canicas en cada vértice debe ser un entero positivo"
-    rel = 0
-    for k in m:
-        rel += sum(k)
-    if rel != len(m):
-        return "La matriz de relaciones no cumple las condiciones"
-    elif c != int(c):
+    if c != int(c):
         return "El número de clics debe ser un entero positivo"
     else:
         for k in range(c):
@@ -42,7 +38,7 @@ def Sim_Exp_Can_Det(m,xi,c):
         return xf
 
 
-def Sim_Exp_Part_Prob(n,m):
+def Sim_Exp_Ren_Part_Prob(n,m):
     """Calcula y devuelve el estado final y la matriz de probabilidades después de 2 clics, simulando el experimento probabilístico de una partícula disparada por n rendijas
     (int, 2D array) -> 2D array, 1D array"""
     m = array(m)
@@ -56,7 +52,7 @@ def Sim_Exp_Part_Prob(n,m):
         return m2,xf
 
 
-def Sim_Exp_Part_Cuan(n,m):
+def Sim_Exp_Ren_Part_Cuan(n,m):
     """Calcula y devuelve el estado final y la matriz de probabilidades después de 2 clics, simulando el experimento cuántico de una partícula disparada por n rendijas
     (int, 2D array) -> 2D array, 1D array"""
     m = array(m)
@@ -68,3 +64,20 @@ def Sim_Exp_Part_Cuan(n,m):
     else:
         xf = dot(m2,xi)
         return m2,xf
+    
+
+def Graf_Exp(x,y):
+    """Devuelve la imagen de un gráfico de barras en formato PNG
+    (1D array, 1D array) -> Image.png"""
+    fig, ax = plt.subplots()
+    ax.bar(x = x, height = y)
+    
+    res = input("¿Desea guardar una imagen del gráfico? (s/n): ")
+    while res != "s" and res != "n":
+        print("Seleccione una respuesta correcta porfavor.\n")
+        res = input("¿Desea guardar el gráfico en formato PNG? (s/n): ")
+    
+    if res == "s":
+        plt.savefig('grafico_experimento.png')
+
+    plt.show()
