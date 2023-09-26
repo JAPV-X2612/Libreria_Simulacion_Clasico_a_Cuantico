@@ -1,4 +1,4 @@
-# Programa de Simulación de lo Clásico a lo Cuántico
+# Librería de Simulación de lo Clásico a lo Cuántico
 
 ## Descripción 📑
 ---
