@@ -122,7 +122,7 @@ A continuación se muestra un ejemplo de ejecución de cada experimento en [IDLE
 ```
 >>> Graf_Exp([0,1,2,3,4,5,6,7],[0,0,0,1/6,1/6,1/3,1/6,1/6])
      ¿Desea guardar una imagen del gráfico? (s/n): s
-     <img src="https://github.com/JAPV-X2612/Pruebas/blob/main/gr%C3%A1fico_experimento.png" width="360" height="270" />    
+     <img src="[https://github.com/JAPV-X2612/Pruebas/blob/main/gr%C3%A1fico_experimento.png](https://github.com/JAPV-X2612/Libreria_Simulacion_Clasico_a_Cuantico/blob/main/grafico_experimento.png)" width="360" height="270" />    
 ```
 
 ## Textos y Wikis 📖
