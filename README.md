@@ -2,7 +2,7 @@
 
 ## Descripción 📑
 ---
-Esta es un proyecto que contiene funciones para simular experimentos determinísticos, probabilísticos y cuánticos con posiciones de canicas o partículas en un número determinado de cajas, rendijas u otros lugares en el espacio.  
+Este es un proyecto que contiene funciones para simular experimentos determinísticos, probabilísticos y cuánticos con posiciones de canicas o partículas en un número determinado de cajas, rendijas u otros lugares en el espacio.  
 
 ## Tabla de Contenidos 🗂️
 ---
@@ -130,7 +130,7 @@ Este proyecto es de la autoría de ***Jesús Alfonso Pinzón Vega***, Ingeniero 
 ## Licencia 📄
 ---
 Este proyecto tiene licencia de código abierto, por lo cual puede ser usado por cualquier persona u organización con fines educativos y de investigación. No obstante, está **PROHIBIDA SU DISTRIBUCIÓN** parcial o completa con fines lucrativos sin expreso consentimiento del autor.  
-Se recomienda revisar el archivo **LICENSE** adjunto al repositorio para mayor información.
+Se recomienda revisar el archivo [LICENSE](https://github.com/JAPV-X2612/Libreria_Simulacion_Clasico_a_Cuantico/blob/main/LICENSE.md) adjunto al repositorio para mayor información.
 
 ## Información Adicional 💡
 ---
